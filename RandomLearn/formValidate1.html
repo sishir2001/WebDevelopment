@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation 1</title>
+    <style>
+        .invalid{
+            border-radius: 2px;
+            border-color: red;
+        }
+        .valid{
+            border-radius: 2px;
+            border-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" id="form">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname">
+        <input type="button" value="Submit" id="btn">
+    </form>
+    <script>
+        let btn = document.querySelector("#btn");
+
+        btn.addEventListener('click',validateBtn);
+        
+        function validateBtn(event){
+            console.log(event.target);
+            console.log(event.target.nodeName);
+            // console.log(typeof(event.target));
+            console.log(event.cancelable);
+            event.preventDefault();
+            let fname = document.querySelector("#fname").value;
+            let lname = document.querySelector("#lname").value;
+            let form = document.querySelector("#form");
+            let children = form.children;
+            // let ret = true;
+            if(fname === "" || lname === ""){
+                if(form.classList.contains("valid")){
+                    children[1].classList.replace("invalid");
+                    children[3].classList.replace("invalid");
+                }
+                else{
+                    console.log(typeof(children));
+                    children[1].classList.add("invalid");
+                    children[3].classList.add("invalid");
+                }
+                // ret = false;
+            }
+            else{
+                if(form.classList.contains("invalid")){
+                    children[1].classList.replace("valid");
+                    children[3].classList.replace("valid");
+                }
+                else{
+                    children[1].classList.add("valid");
+                    children[3].classList.add("valid");
+                }
+                
+            }
+            // return ret;
+        }
+        
+    </script>
+</body>
+</html>
