@@ -1,17 +1,17 @@
-const {urlencoded} = require("body-parser");
 const bodyParser = require("body-parser");
 const express = require("express");
 const mongoose = require("mongoose");
+const ejs = require('ejs');
 const app = express();
 
-app.use(bodyParser({extended:false}));
-app.use();
+app.use(express.static("public"));
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/",(req,res)=>{
     res.send("Hello Worlf");
 });
 
-app.listen(8000, ()=>{
-    console.log("Server Listening on port 8000")
+app.listen(3000, ()=>{
+    console.log("Server Listening on port 3000")
 })
