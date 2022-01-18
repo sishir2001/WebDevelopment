@@ -1,6 +1,6 @@
 import React from "react";
 import unsplash from "../api/unsplash";
-import serpapi from "../api/serpapi"
+import serpapi from "../api/serpapi";
 import zencerp from "../api/zencerp";
 import SearchBar from "./SearchBar";
 import ImageList from "./ImageList";
@@ -62,7 +62,6 @@ class App extends React.Component {
             images: response.data.results,
         });
     };
-
 
     render() {
         return (
