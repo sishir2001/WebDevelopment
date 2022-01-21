@@ -17,24 +17,25 @@ class App extends React.Component {
 
     //     // ? getting images
     //     // * serpapi
-    //     // const response = await serpapi.get("/search.json", {
-    //     //     params: {
-    //     //         api_key:'141696ddf3b37034a3d615f809fdae3929de09a6cb40de15c91c28bf7709fe98',
-    //     //         q: term,
-    //     //         tbm: 'isch',
-    //     //         ijn: 0
-    //     //     },
-    //     // });
-
-    //     // * zencerp api
-    //     const response = await zencerp.get("/api/v2/search", {
+    //     const response = await serpapi.get("/search.json", {
     //         params: {
-    //             apikey:'df4df990-76f8-11ec-a7d2-f9e01d22dc39',
+    //             api_key:'141696ddf3b37034a3d615f809fdae3929de09a6cb40de15c91c28bf7709fe98',
     //             q: term,
+    //             origin:'*',
     //             tbm: 'isch',
-    //             device: 'desktop'
+    //             ijn: 0
     //         },
     //     });
+
+    //     // // * zencerp api
+    //     // const response = await zencerp.get("/api/v2/search", {
+    //     //     params: {
+    //     //         apikey:'df4df990-76f8-11ec-a7d2-f9e01d22dc39',
+    //     //         q: term,
+    //     //         tbm: 'isch',
+    //     //         device: 'desktop'
+    //     //     },
+    //     // });
     //     // console.log(this);
     //     console.log(response);
 
