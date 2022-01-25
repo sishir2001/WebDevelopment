@@ -14,10 +14,11 @@ export const fetchPosts = () => {
     };
 };
 
-export const fetchUsers = ()=>{
+export const fetchUser = (userId)=>{
     // fetch the name of the user who has written the article
     return async (dispatch,getState)=>{
-        const response = await jsonPlaceholder.get("/users");
+        const response = await jsonPlaceholder.get(`/users/${userId}`);
+        console.log(response.data);
         // call dispatch 
         dispatch({
             type:'FETCH_USER',
